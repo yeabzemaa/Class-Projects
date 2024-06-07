@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/login_signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Login</title>
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <h2>Login</h2>
+        <h3>Enter your email to Log in </h3>
+        <form id="login-form">
+            <input type="email" placeholder="Enter Your @ Email" required>
+            <input type="password" placeholder="Enter Your Password" required>
+            <button type="submit">Login</button>
+            <small>or continue with</small>
+            <button class="google-button" type="button">
+                <i class="fab fa-google"></i> Google
+            </button>
+            <p>By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        window.location.href = 'home.html'; // Redirect to home.html
+    });
+</script>
+</body>
+</html>

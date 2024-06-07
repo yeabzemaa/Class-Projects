@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Appointment</a></li>
+        <li><a href="">Requirements</a></li>
+        <li><a href="">Check Status</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="profile"><a href="signup.html"><i class="fas fa-user"></i></a></li>
+    </ul>
+</header>
+<main>
+    <div>
+        <h1>Kebele Administration system</h1>
+        <h2>Kebele is a type of <br>the smallest administrative <br>unit in Ethiopia.</h2>
+        <p>The kebele, which can be translated as "neighborhood,"<br> is the smallest unit of local government in Ethiopia. <br>Each kebele consists of a number of families.</p>
+    </div>
+    <div class="images">
+        <img src="../images/image1.png" alt="Image 1">
+        <img src="../images/image2.png" alt="Image 2">
+        <img src="../images/image3.png" alt="Image 3">
+        <img src="../images/image4.png" alt="Image 4">
+    </div>
+</main>
+<footer>
+    <div class="info">
+        <img src="../images/logo.png" alt="logo">
+        <ul>
+            <li>News</li>
+            <li>Contact Us</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <div class="contact">
+        <h3>Kebele Administration System</h3>
+        <input type="email" name="email" placeholder="Enter your email">
+        <input type="submit" name="submit" value="Subscribe">
+    </div>
+    <div class="contact-info">
+        <h3>Phone: 7533</h3>
+        <h3>Email: crrsa@aacrrsa.gov.et</h3>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+<script>
+    document.querySelector('h2').addEventListener('click', function() {
+        this.classList.toggle('expanded');
+    });
+</script>
+</body>
+</html>
