@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        .half-pink-half-white {
+          background: linear-gradient(to bottom, #FFF4F4 50%, #ffffff 50%);
+        }
+    
+            .carousel-item {
+              display: none;
+            }
+            .carousel-item.active {
+              display: block;
+            }
+  </style>
+</head>
+<body class="h-screen half-pink-half-white   justify-center">
+    <nav class="relative container mx-auto p-6">
+        <div class="flex items-center justify-between">
+            <div class="pt-2 pl-5">
+                <h1 class="font-bold text-xl">
+                        YZM
+                </h1>
+            </div>
+            <div class="hidden md:flex space-x-6 font-bold font-sans">
+                <a href="#" class="hover:text-gray-400">HOME</a>
+                <a href="#" class="hover:text-gray-400">ABOUT</a>
+                <a href="#" class="hover:text-gray-400">SKILL</a>
+                <a href="#" class="hover:text-gray-400">CONTACT</a>
+            </div>
+            <div class=" flex space-x-2 w-10 h-10 mr-20">
+                <img src="img\211903_github_social_icon.svg" class="w-8 h-8" alt="">
+                <img src="img\1161953_instagram_icon.svg" class="w-8 h-8" alt="">
+                <img src="img\3209304_linkedin_media_social_logo_icon.svg" class="w-8 h-8" alt="">
+                <img src="img\4552607_facebook_logo_icon.svg" class="w-8 h-8" alt="">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+      <div class="container  flex items-center justify-center mx-auto mt-[100px] bg-white w-[500px] h-[420px] drop-shadow-2xl">
+        <div class="relative left-[0px]">
+            <div class="carousel-item active">
+              <img  src="img\317755_badge_html_html5_achievement_award_icon.svg" class="w-[300px]">
+            </div>
+            <div class="carousel-item">
+              <img src="img\315874_document_file_css_icon.svg" class="w-[300px]">
+            </div>
+            <div class="carousel-item">
+              <img src="img\1174949_js_react js_logo_react_react native_icon.svg" class="w-[300px]">
+            </div>
+            <div class="carousel-item">
+              <img src="img\4373213_js_logo_logos_icon.svg" class="w-[300px]">
+            </div>
+            <div class="carousel-item">
+              <img src="img\4375050_logo_python_icon.svg" class="w-[300px]">
+            </div>
+            
+            <!-- Navigation dots -->
+            <div class="absolute bottom-[0px] top-[370px] left-0 right-0 flex justify-center p-4">
+              <span class="dot w-4 h-4 mx-2 rounded-full bg-gray-300 cursor-pointer" onclick="currentSlide(0)"></span>
+              <span class="dot w-4 h-4 mx-2 rounded-full bg-gray-300 cursor-pointer" onclick="currentSlide(1)"></span>
+              <span class="dot w-4 h-4 mx-2 rounded-full bg-gray-300 cursor-pointer" onclick="currentSlide(2)"></span>
+            </div>
+          </div>
+    </div>
+      </div>
+      <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const dots = document.querySelectorAll('.dot');
+    
+        function showSlides(n) {
+          if (n >= slides.length) slideIndex = 0;
+          if (n < 0) slideIndex = slides.length - 1;
+          
+          slides.forEach(slide => slide.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('bg-gray-700'));
+          
+          slides[slideIndex].classList.add('active');
+          dots[slideIndex].classList.add('bg-gray-700');
+        }
+    
+        function currentSlide(n) {
+          slideIndex = n;
+          showSlides(slideIndex);
+        }
+    
+        setInterval(() => {
+          slideIndex++;
+          showSlides(slideIndex);
+        }, 3000); // Change slide every 3 seconds
+    
+        showSlides(slideIndex);
+      </script>
+</body>
+</html>
